@@ -7,7 +7,7 @@
 class Employee
 {
     int id;
-    QString mail, nom, prenom, poste;
+    QString mail, nom, prenom, poste,chaine;
 public:
 
     Employee(){}
@@ -27,6 +27,9 @@ public:
     bool ajouter();
     bool modify(int);
     bool supprimer(int);
+    bool ChaineValide(QString chaine);
+    QSqlQueryModel * show_Desc_name();
+QSqlQueryModel * show_Asc_name();
 
 };
 

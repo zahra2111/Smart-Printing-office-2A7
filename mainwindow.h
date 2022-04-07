@@ -1,6 +1,27 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include <QDateEdit>
+#include <QPlainTextEdit>
+//#include <QPrinter>
+//#include <QPrinterInfo>
+//#include <QPrintDialog>
+#include <QTextStream>
+#include <QPainter>
+#include <QTextStream>
+#include <QFileDialog>
+#include <QTextDocument>
+#include <QtPrintSupport/QPrinter>
+#include <QFileDialog>
+#include <QTextDocument>
+#include <strstream>
+#include <QSystemTrayIcon>
+#include <QRegExpValidator>
+#include <QDesktopServices>
+#include <QUrl>
+#include <QGuiApplication>
+//#include <QQmlApplicationEngine>
+#include <QTcpSocket>
+//#include <QQuickItem>
 #include <QMainWindow>
 #include "employee.h"
 
@@ -47,9 +68,26 @@ private slots:
 
     void on_Suppaff_2_clicked();
 
+    void on_tri_asc_clicked();
+
+    void on_tri_desc_clicked();
+
+    void on_lineEditAff_textChanged(const QString &arg1);
+
+    void on_lineEditAff_textEdited(const QString &arg1);
+
+    void on_pushButton_3_clicked();
+
+    void on_CHAT_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_notifi_clicked();
+
 private:
     Ui::MainWindow *ui;
     Employee emp;
     int mref;
+    QTcpSocket*mSocket;
 };
 #endif // MAINWINDOW_H
